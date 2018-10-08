@@ -33,6 +33,8 @@ public class SaveSessionServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
         //建立 session 並且儲存
+        HttpSession s=request.getSession();
+        s.setAttribute("food", "noodle");
         ///////////////////////////////////////////////////////////////
         response.sendRedirect("session.jsp");
     }
